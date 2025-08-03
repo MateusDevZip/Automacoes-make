@@ -1,0 +1,1486 @@
+{
+    "name": "WooCommerce Webhooks, Spotter e RD Station",
+    "flow": [
+        {
+            "id": 7,
+            "module": "gateway:CustomWebHook",
+            "version": 1,
+            "parameters": {
+                "hook": 439682,
+                "maxResults": 1
+            },
+            "mapper": {},
+            "metadata": {
+                "designer": {
+                    "x": 0,
+                    "y": 300
+                },
+                "restore": {
+                    "parameters": {
+                        "hook": {
+                            "data": {
+                                "editable": "true"
+                            },
+                            "label": "Novo webhook"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "hook",
+                        "type": "hook:gateway-webhook",
+                        "label": "Webhook",
+                        "required": true
+                    },
+                    {
+                        "name": "maxResults",
+                        "type": "number",
+                        "label": "Maximum number of results"
+                    }
+                ],
+                "interface": [
+                    {
+                        "name": "id",
+                        "type": "number"
+                    },
+                    {
+                        "name": "parent_id",
+                        "type": "number"
+                    },
+                    {
+                        "name": "status",
+                        "type": "text"
+                    },
+                    {
+                        "name": "currency",
+                        "type": "text"
+                    },
+                    {
+                        "name": "version",
+                        "type": "text"
+                    },
+                    {
+                        "name": "prices_include_tax",
+                        "type": "boolean"
+                    },
+                    {
+                        "name": "date_created",
+                        "type": "text"
+                    },
+                    {
+                        "name": "date_modified",
+                        "type": "text"
+                    },
+                    {
+                        "name": "discount_total",
+                        "type": "text"
+                    },
+                    {
+                        "name": "discount_tax",
+                        "type": "text"
+                    },
+                    {
+                        "name": "shipping_total",
+                        "type": "text"
+                    },
+                    {
+                        "name": "shipping_tax",
+                        "type": "text"
+                    },
+                    {
+                        "name": "cart_tax",
+                        "type": "text"
+                    },
+                    {
+                        "name": "total",
+                        "type": "text"
+                    },
+                    {
+                        "name": "total_tax",
+                        "type": "text"
+                    },
+                    {
+                        "name": "customer_id",
+                        "type": "number"
+                    },
+                    {
+                        "name": "order_key",
+                        "type": "text"
+                    },
+                    {
+                        "name": "billing",
+                        "spec": [
+                            {
+                                "name": "first_name",
+                                "type": "text"
+                            },
+                            {
+                                "name": "last_name",
+                                "type": "text"
+                            },
+                            {
+                                "name": "company",
+                                "type": "text"
+                            },
+                            {
+                                "name": "address_1",
+                                "type": "text"
+                            },
+                            {
+                                "name": "address_2",
+                                "type": "text"
+                            },
+                            {
+                                "name": "city",
+                                "type": "text"
+                            },
+                            {
+                                "name": "state",
+                                "type": "text"
+                            },
+                            {
+                                "name": "postcode",
+                                "type": "text"
+                            },
+                            {
+                                "name": "country",
+                                "type": "text"
+                            },
+                            {
+                                "name": "email",
+                                "type": "text"
+                            },
+                            {
+                                "name": "phone",
+                                "type": "text"
+                            },
+                            {
+                                "name": "number",
+                                "type": "text"
+                            },
+                            {
+                                "name": "neighborhood",
+                                "type": "text"
+                            },
+                            {
+                                "name": "persontype",
+                                "type": "text"
+                            },
+                            {
+                                "name": "cpf",
+                                "type": "text"
+                            },
+                            {
+                                "name": "rg",
+                                "type": "text"
+                            },
+                            {
+                                "name": "cnpj",
+                                "type": "text"
+                            },
+                            {
+                                "name": "ie",
+                                "type": "text"
+                            },
+                            {
+                                "name": "birthdate",
+                                "type": "text"
+                            },
+                            {
+                                "name": "gender",
+                                "type": "text"
+                            },
+                            {
+                                "name": "cellphone",
+                                "type": "text"
+                            }
+                        ],
+                        "type": "collection"
+                    },
+                    {
+                        "name": "shipping",
+                        "spec": [
+                            {
+                                "name": "first_name",
+                                "type": "text"
+                            },
+                            {
+                                "name": "last_name",
+                                "type": "text"
+                            },
+                            {
+                                "name": "company",
+                                "type": "text"
+                            },
+                            {
+                                "name": "address_1",
+                                "type": "text"
+                            },
+                            {
+                                "name": "address_2",
+                                "type": "text"
+                            },
+                            {
+                                "name": "city",
+                                "type": "text"
+                            },
+                            {
+                                "name": "state",
+                                "type": "text"
+                            },
+                            {
+                                "name": "postcode",
+                                "type": "text"
+                            },
+                            {
+                                "name": "country",
+                                "type": "text"
+                            },
+                            {
+                                "name": "phone",
+                                "type": "text"
+                            },
+                            {
+                                "name": "number",
+                                "type": "text"
+                            },
+                            {
+                                "name": "neighborhood",
+                                "type": "text"
+                            }
+                        ],
+                        "type": "collection"
+                    },
+                    {
+                        "name": "payment_method",
+                        "type": "text"
+                    },
+                    {
+                        "name": "payment_method_title",
+                        "type": "text"
+                    },
+                    {
+                        "name": "transaction_id",
+                        "type": "text"
+                    },
+                    {
+                        "name": "customer_ip_address",
+                        "type": "text"
+                    },
+                    {
+                        "name": "customer_user_agent",
+                        "type": "text"
+                    },
+                    {
+                        "name": "created_via",
+                        "type": "text"
+                    },
+                    {
+                        "name": "customer_note",
+                        "type": "text"
+                    },
+                    {
+                        "name": "date_completed",
+                        "type": "text"
+                    },
+                    {
+                        "name": "date_paid",
+                        "type": "text"
+                    },
+                    {
+                        "name": "cart_hash",
+                        "type": "text"
+                    },
+                    {
+                        "name": "number",
+                        "type": "text"
+                    },
+                    {
+                        "name": "meta_data",
+                        "spec": {
+                            "spec": [
+                                {
+                                    "name": "id",
+                                    "type": "number"
+                                },
+                                {
+                                    "name": "key",
+                                    "type": "text"
+                                },
+                                {
+                                    "name": "value",
+                                    "type": "text"
+                                }
+                            ],
+                            "type": "collection"
+                        },
+                        "type": "array"
+                    },
+                    {
+                        "name": "line_items",
+                        "spec": {
+                            "spec": [
+                                {
+                                    "name": "id",
+                                    "type": "number"
+                                },
+                                {
+                                    "name": "name",
+                                    "type": "text"
+                                },
+                                {
+                                    "name": "product_id",
+                                    "type": "number"
+                                },
+                                {
+                                    "name": "variation_id",
+                                    "type": "number"
+                                },
+                                {
+                                    "name": "quantity",
+                                    "type": "number"
+                                },
+                                {
+                                    "name": "tax_class",
+                                    "type": "text"
+                                },
+                                {
+                                    "name": "subtotal",
+                                    "type": "text"
+                                },
+                                {
+                                    "name": "subtotal_tax",
+                                    "type": "text"
+                                },
+                                {
+                                    "name": "total",
+                                    "type": "text"
+                                },
+                                {
+                                    "name": "total_tax",
+                                    "type": "text"
+                                },
+                                {
+                                    "name": "taxes",
+                                    "type": "array"
+                                },
+                                {
+                                    "name": "meta_data",
+                                    "type": "array"
+                                },
+                                {
+                                    "name": "sku",
+                                    "type": "text"
+                                },
+                                {
+                                    "name": "price",
+                                    "type": "number"
+                                },
+                                {
+                                    "name": "image",
+                                    "spec": [
+                                        {
+                                            "name": "id",
+                                            "type": "text"
+                                        },
+                                        {
+                                            "name": "src",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "type": "collection"
+                                },
+                                {
+                                    "name": "parent_name",
+                                    "type": "text"
+                                }
+                            ],
+                            "type": "collection"
+                        },
+                        "type": "array"
+                    },
+                    {
+                        "name": "tax_lines",
+                        "type": "array"
+                    },
+                    {
+                        "name": "shipping_lines",
+                        "type": "array"
+                    },
+                    {
+                        "name": "fee_lines",
+                        "type": "array"
+                    },
+                    {
+                        "name": "coupon_lines",
+                        "type": "array"
+                    },
+                    {
+                        "name": "refunds",
+                        "type": "array"
+                    },
+                    {
+                        "name": "payment_url",
+                        "type": "text"
+                    },
+                    {
+                        "name": "is_editable",
+                        "type": "boolean"
+                    },
+                    {
+                        "name": "needs_payment",
+                        "type": "boolean"
+                    },
+                    {
+                        "name": "needs_processing",
+                        "type": "boolean"
+                    },
+                    {
+                        "name": "date_created_gmt",
+                        "type": "text"
+                    },
+                    {
+                        "name": "date_modified_gmt",
+                        "type": "text"
+                    },
+                    {
+                        "name": "date_completed_gmt",
+                        "type": "text"
+                    },
+                    {
+                        "name": "date_paid_gmt",
+                        "type": "text"
+                    },
+                    {
+                        "name": "correios_tracking_code",
+                        "type": "text"
+                    },
+                    {
+                        "name": "currency_symbol",
+                        "type": "text"
+                    },
+                    {
+                        "name": "_links",
+                        "spec": [
+                            {
+                                "name": "self",
+                                "spec": {
+                                    "spec": [
+                                        {
+                                            "name": "href",
+                                            "type": "text"
+                                        },
+                                        {
+                                            "name": "targetHints",
+                                            "spec": [
+                                                {
+                                                    "name": "allow",
+                                                    "spec": {
+                                                        "type": "text"
+                                                    },
+                                                    "type": "array"
+                                                }
+                                            ],
+                                            "type": "collection"
+                                        }
+                                    ],
+                                    "type": "collection"
+                                },
+                                "type": "array"
+                            },
+                            {
+                                "name": "collection",
+                                "spec": {
+                                    "spec": [
+                                        {
+                                            "name": "href",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "type": "collection"
+                                },
+                                "type": "array"
+                            },
+                            {
+                                "name": "email_templates",
+                                "spec": {
+                                    "spec": [
+                                        {
+                                            "name": "embeddable",
+                                            "type": "boolean"
+                                        },
+                                        {
+                                            "name": "href",
+                                            "type": "text"
+                                        }
+                                    ],
+                                    "type": "collection"
+                                },
+                                "type": "array"
+                            }
+                        ],
+                        "type": "collection"
+                    }
+                ]
+            }
+        },
+        {
+            "id": 23,
+            "module": "util:SetVariable2",
+            "version": 1,
+            "parameters": {},
+            "filter": {
+                "name": "Compra em processo ",
+                "conditions": []
+            },
+            "mapper": {
+                "name": "Novo_status",
+                "scope": "roundtrip",
+                "value": "{{if(7.status = \"processing\"; \"COMPRA CONCLUÍDA\"; \"NÃO COMPROU\")}}"
+            },
+            "metadata": {
+                "designer": {
+                    "x": 300,
+                    "y": 300
+                },
+                "restore": {
+                    "expect": {
+                        "scope": {
+                            "label": "One cycle"
+                        }
+                    }
+                },
+                "expect": [
+                    {
+                        "name": "name",
+                        "type": "text",
+                        "label": "Variable name",
+                        "required": true
+                    },
+                    {
+                        "name": "scope",
+                        "type": "select",
+                        "label": "Variable lifetime",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "roundtrip",
+                                "execution"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "value",
+                        "type": "any",
+                        "label": "Variable value"
+                    }
+                ],
+                "interface": [
+                    {
+                        "name": "Novo_status",
+                        "type": "any",
+                        "label": "Novo_status"
+                    }
+                ]
+            }
+        },
+        {
+            "id": 12,
+            "module": "builtin:BasicRouter",
+            "version": 1,
+            "mapper": null,
+            "metadata": {
+                "designer": {
+                    "x": 600,
+                    "y": 300
+                }
+            },
+            "routes": [
+                {
+                    "flow": [
+                        {
+                            "id": 13,
+                            "module": "http:ActionSendData",
+                            "version": 3,
+                            "parameters": {
+                                "handleErrors": true,
+                                "useNewZLibDeCompress": true
+                            },
+                            "mapper": {
+                                "ca": "",
+                                "qs": [],
+                                "url": "https://api.exactsales.com.br/v3/leadsAdd",
+                                "data": "{ \"duplicityValidation\": \"false\", \"lead\": { \"name\": \"{{7.billing.company}}\", \"industry\": \"{{7.billing.company}}\", \"source\": \"certificadopj\", \"group\": \"certificadopj\", \"phone\": \"{{7.billing.phone}}\", \"phone2\": \"{{7.billing.cellphone}}\", \"website\": \"{{23.Novo_status}}\", \"description\": Status da compra: {{23.Novo_status}};{{add(\"\\n___CNPJ: \"; 7.billing.cnpj; \"\\n___Contador: \"; get(map(7.meta_data; \"key\"; \"value\"); \"_billing_contador\"); \"\\n___Notas Emitidas: \"; get(map(7.meta_data; \"key\"; \"value\"); \"_billing_notas_emitidas\"); \"\\n___Trabalha com: \"; get(map(7.meta_data; \"key\"; \"value\"); \"_billing_trabalha_com\"))}}",
+                                "gzip": true,
+                                "method": "post",
+                                "headers": [
+                                    {
+                                        "name": "Content-Type",
+                                        "value": "application/json"
+                                    },
+                                    {
+                                        "name": "token_exact",
+                                        "value": "XXX"
+                                    }
+                                ],
+                                "timeout": "",
+                                "useMtls": false,
+                                "authPass": "",
+                                "authUser": "",
+                                "bodyType": "raw",
+                                "contentType": "application/json",
+                                "serializeUrl": false,
+                                "shareCookies": false,
+                                "parseResponse": true,
+                                "followRedirect": true,
+                                "useQuerystring": false,
+                                "followAllRedirects": false,
+                                "rejectUnauthorized": true
+                            },
+                            "metadata": {
+                                "designer": {
+                                    "x": 900,
+                                    "y": 150
+                                },
+                                "restore": {
+                                    "expect": {
+                                        "qs": {
+                                            "mode": "chose"
+                                        },
+                                        "method": {
+                                            "mode": "chose",
+                                            "label": "POST"
+                                        },
+                                        "headers": {
+                                            "mode": "chose",
+                                            "items": [
+                                                null,
+                                                null
+                                            ]
+                                        },
+                                        "bodyType": {
+                                            "label": "Raw"
+                                        },
+                                        "contentType": {
+                                            "label": "JSON (application/json)"
+                                        }
+                                    }
+                                },
+                                "parameters": [
+                                    {
+                                        "name": "handleErrors",
+                                        "type": "boolean",
+                                        "label": "Evaluate all states as errors (except for 2xx and 3xx )",
+                                        "required": true
+                                    },
+                                    {
+                                        "name": "useNewZLibDeCompress",
+                                        "type": "hidden"
+                                    }
+                                ],
+                                "expect": [
+                                    {
+                                        "name": "url",
+                                        "type": "url",
+                                        "label": "URL",
+                                        "required": true
+                                    },
+                                    {
+                                        "name": "serializeUrl",
+                                        "type": "boolean",
+                                        "label": "Serialize URL",
+                                        "required": true
+                                    },
+                                    {
+                                        "name": "method",
+                                        "type": "select",
+                                        "label": "Method",
+                                        "required": true,
+                                        "validate": {
+                                            "enum": [
+                                                "get",
+                                                "head",
+                                                "post",
+                                                "put",
+                                                "patch",
+                                                "delete",
+                                                "options"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "name": "headers",
+                                        "spec": [
+                                            {
+                                                "name": "name",
+                                                "type": "text",
+                                                "label": "Name",
+                                                "required": true
+                                            },
+                                            {
+                                                "name": "value",
+                                                "type": "text",
+                                                "label": "Value"
+                                            }
+                                        ],
+                                        "type": "array",
+                                        "label": "Headers"
+                                    },
+                                    {
+                                        "name": "qs",
+                                        "spec": [
+                                            {
+                                                "name": "name",
+                                                "type": "text",
+                                                "label": "Name",
+                                                "required": true
+                                            },
+                                            {
+                                                "name": "value",
+                                                "type": "text",
+                                                "label": "Value"
+                                            }
+                                        ],
+                                        "type": "array",
+                                        "label": "Query String"
+                                    },
+                                    {
+                                        "name": "bodyType",
+                                        "type": "select",
+                                        "label": "Body type",
+                                        "validate": {
+                                            "enum": [
+                                                "raw",
+                                                "x_www_form_urlencoded",
+                                                "multipart_form_data"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "name": "parseResponse",
+                                        "type": "boolean",
+                                        "label": "Parse response",
+                                        "required": true
+                                    },
+                                    {
+                                        "name": "authUser",
+                                        "type": "text",
+                                        "label": "User name"
+                                    },
+                                    {
+                                        "name": "authPass",
+                                        "type": "password",
+                                        "label": "Password"
+                                    },
+                                    {
+                                        "name": "timeout",
+                                        "type": "uinteger",
+                                        "label": "Timeout",
+                                        "validate": {
+                                            "max": 300,
+                                            "min": 1
+                                        }
+                                    },
+                                    {
+                                        "name": "shareCookies",
+                                        "type": "boolean",
+                                        "label": "Share cookies with other HTTP modules",
+                                        "required": true
+                                    },
+                                    {
+                                        "name": "ca",
+                                        "type": "cert",
+                                        "label": "Self-signed certificate"
+                                    },
+                                    {
+                                        "name": "rejectUnauthorized",
+                                        "type": "boolean",
+                                        "label": "Reject connections that are using unverified (self-signed) certificates",
+                                        "required": true
+                                    },
+                                    {
+                                        "name": "followRedirect",
+                                        "type": "boolean",
+                                        "label": "Follow redirect",
+                                        "required": true
+                                    },
+                                    {
+                                        "name": "useQuerystring",
+                                        "type": "boolean",
+                                        "label": "Disable serialization of multiple same query string keys as arrays",
+                                        "required": true
+                                    },
+                                    {
+                                        "name": "gzip",
+                                        "type": "boolean",
+                                        "label": "Request compressed content",
+                                        "required": true
+                                    },
+                                    {
+                                        "name": "useMtls",
+                                        "type": "boolean",
+                                        "label": "Use Mutual TLS",
+                                        "required": true
+                                    },
+                                    {
+                                        "name": "contentType",
+                                        "type": "select",
+                                        "label": "Content type",
+                                        "validate": {
+                                            "enum": [
+                                                "text/plain",
+                                                "application/json",
+                                                "application/xml",
+                                                "text/xml",
+                                                "text/html",
+                                                "custom"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "name": "data",
+                                        "type": "buffer",
+                                        "label": "Request content"
+                                    },
+                                    {
+                                        "name": "followAllRedirects",
+                                        "type": "boolean",
+                                        "label": "Follow all redirect",
+                                        "required": true
+                                    }
+                                ]
+                            },
+                            "onerror": [
+                                {
+                                    "id": 15,
+                                    "module": "builtin:Ignore",
+                                    "version": 1,
+                                    "filter": {
+                                        "name": "Catch all",
+                                        "conditions": []
+                                    },
+                                    "metadata": {
+                                        "designer": {
+                                            "x": 1200,
+                                            "y": 300
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "id": 14,
+                            "module": "http:ActionSendData",
+                            "version": 3,
+                            "parameters": {
+                                "handleErrors": true,
+                                "useNewZLibDeCompress": true
+                            },
+                            "mapper": {
+                                "ca": "",
+                                "qs": [],
+                                "url": "https://api.exactsales.com.br/v3/personsAdd",
+                                "data": "{\n    \"leadId\": {{13.data.value}},\n    \"name\": \"{{7.billing.first_name}} {{7.billing.last_name}}\",\n    \"email\": \"{{7.billing.email}}\",\n    \"phone1\": \"{{7.billing.phone}}\",\n    \"phone2\": \"{{7.billing.cellphone}}\"\n}",
+                                "gzip": true,
+                                "method": "post",
+                                "headers": [
+                                    {
+                                        "name": "Content-Type",
+                                        "value": "application/json"
+                                    },
+                                    {
+                                        "name": "token_exact",
+                                        "value": "XXX"
+                                    }
+                                ],
+                                "timeout": "",
+                                "useMtls": false,
+                                "authPass": "",
+                                "authUser": "",
+                                "bodyType": "raw",
+                                "contentType": "application/json",
+                                "serializeUrl": false,
+                                "shareCookies": false,
+                                "parseResponse": false,
+                                "followRedirect": true,
+                                "useQuerystring": false,
+                                "followAllRedirects": false,
+                                "rejectUnauthorized": true
+                            },
+                            "metadata": {
+                                "designer": {
+                                    "x": 1200,
+                                    "y": 0
+                                },
+                                "restore": {
+                                    "expect": {
+                                        "qs": {
+                                            "mode": "chose"
+                                        },
+                                        "method": {
+                                            "mode": "chose",
+                                            "label": "POST"
+                                        },
+                                        "headers": {
+                                            "mode": "chose",
+                                            "items": [
+                                                null,
+                                                null
+                                            ]
+                                        },
+                                        "bodyType": {
+                                            "label": "Raw"
+                                        },
+                                        "contentType": {
+                                            "label": "JSON (application/json)"
+                                        }
+                                    }
+                                },
+                                "parameters": [
+                                    {
+                                        "name": "handleErrors",
+                                        "type": "boolean",
+                                        "label": "Evaluate all states as errors (except for 2xx and 3xx )",
+                                        "required": true
+                                    },
+                                    {
+                                        "name": "useNewZLibDeCompress",
+                                        "type": "hidden"
+                                    }
+                                ],
+                                "expect": [
+                                    {
+                                        "name": "url",
+                                        "type": "url",
+                                        "label": "URL",
+                                        "required": true
+                                    },
+                                    {
+                                        "name": "serializeUrl",
+                                        "type": "boolean",
+                                        "label": "Serialize URL",
+                                        "required": true
+                                    },
+                                    {
+                                        "name": "method",
+                                        "type": "select",
+                                        "label": "Method",
+                                        "required": true,
+                                        "validate": {
+                                            "enum": [
+                                                "get",
+                                                "head",
+                                                "post",
+                                                "put",
+                                                "patch",
+                                                "delete",
+                                                "options"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "name": "headers",
+                                        "spec": [
+                                            {
+                                                "name": "name",
+                                                "type": "text",
+                                                "label": "Name",
+                                                "required": true
+                                            },
+                                            {
+                                                "name": "value",
+                                                "type": "text",
+                                                "label": "Value"
+                                            }
+                                        ],
+                                        "type": "array",
+                                        "label": "Headers"
+                                    },
+                                    {
+                                        "name": "qs",
+                                        "spec": [
+                                            {
+                                                "name": "name",
+                                                "type": "text",
+                                                "label": "Name",
+                                                "required": true
+                                            },
+                                            {
+                                                "name": "value",
+                                                "type": "text",
+                                                "label": "Value"
+                                            }
+                                        ],
+                                        "type": "array",
+                                        "label": "Query String"
+                                    },
+                                    {
+                                        "name": "bodyType",
+                                        "type": "select",
+                                        "label": "Body type",
+                                        "validate": {
+                                            "enum": [
+                                                "raw",
+                                                "x_www_form_urlencoded",
+                                                "multipart_form_data"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "name": "parseResponse",
+                                        "type": "boolean",
+                                        "label": "Parse response",
+                                        "required": true
+                                    },
+                                    {
+                                        "name": "authUser",
+                                        "type": "text",
+                                        "label": "User name"
+                                    },
+                                    {
+                                        "name": "authPass",
+                                        "type": "password",
+                                        "label": "Password"
+                                    },
+                                    {
+                                        "name": "timeout",
+                                        "type": "uinteger",
+                                        "label": "Timeout",
+                                        "validate": {
+                                            "max": 300,
+                                            "min": 1
+                                        }
+                                    },
+                                    {
+                                        "name": "shareCookies",
+                                        "type": "boolean",
+                                        "label": "Share cookies with other HTTP modules",
+                                        "required": true
+                                    },
+                                    {
+                                        "name": "ca",
+                                        "type": "cert",
+                                        "label": "Self-signed certificate"
+                                    },
+                                    {
+                                        "name": "rejectUnauthorized",
+                                        "type": "boolean",
+                                        "label": "Reject connections that are using unverified (self-signed) certificates",
+                                        "required": true
+                                    },
+                                    {
+                                        "name": "followRedirect",
+                                        "type": "boolean",
+                                        "label": "Follow redirect",
+                                        "required": true
+                                    },
+                                    {
+                                        "name": "useQuerystring",
+                                        "type": "boolean",
+                                        "label": "Disable serialization of multiple same query string keys as arrays",
+                                        "required": true
+                                    },
+                                    {
+                                        "name": "gzip",
+                                        "type": "boolean",
+                                        "label": "Request compressed content",
+                                        "required": true
+                                    },
+                                    {
+                                        "name": "useMtls",
+                                        "type": "boolean",
+                                        "label": "Use Mutual TLS",
+                                        "required": true
+                                    },
+                                    {
+                                        "name": "contentType",
+                                        "type": "select",
+                                        "label": "Content type",
+                                        "validate": {
+                                            "enum": [
+                                                "text/plain",
+                                                "application/json",
+                                                "application/xml",
+                                                "text/xml",
+                                                "text/html",
+                                                "custom"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "name": "data",
+                                        "type": "buffer",
+                                        "label": "Request content"
+                                    },
+                                    {
+                                        "name": "followAllRedirects",
+                                        "type": "boolean",
+                                        "label": "Follow all redirect",
+                                        "required": true
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "flow": [
+                        {
+                            "id": 8,
+                            "module": "rd-station:ActionConversionEvent",
+                            "version": 1,
+                            "parameters": {
+                                "__IMTCONN__": 1388385
+                            },
+                            "filter": {
+                                "name": "Compra concluida ",
+                                "conditions": [
+                                    [
+                                        {
+                                            "a": "{{7.status}}",
+                                            "b": "processing",
+                                            "o": "text:equal"
+                                        }
+                                    ]
+                                ]
+                            },
+                            "mapper": {
+                                "city": "{{7.billing.city}}",
+                                "name": "{{7.billing.first_name}} {{7.billing.last_name}}",
+                                "email": "{{7.billing.email}}",
+                                "state": "{{7.billing.state}}",
+                                "country": "{{7.billing.country}}",
+                                "job_title": "{{7.billing.cnpj}}",
+                                "company_name": "{{7.billing.company}}",
+                                "customFields": [
+                                    {
+                                        "customFieldName": "cf_cnpj",
+                                        "customFieldValue": "{{7.billing.cnpj}}"
+                                    }
+                                ],
+                                "mobile_phone": "{{7.billing.cellphone}}",
+                                "personal_phone": "{{7.billing.phone}}",
+                                "available_for_mailing": true,
+                                "conversion_identifier": "comprouCertificadoPJ"
+                            },
+                            "metadata": {
+                                "designer": {
+                                    "x": 900,
+                                    "y": 600
+                                },
+                                "restore": {
+                                    "expect": {
+                                        "tags": {
+                                            "mode": "chose"
+                                        },
+                                        "legal_bases": {
+                                            "mode": "chose"
+                                        },
+                                        "customFields": {
+                                            "mode": "chose",
+                                            "items": [
+                                                {
+                                                    "customFieldName": {
+                                                        "mode": "chose",
+                                                        "label": "cf_cnpj",
+                                                        "nested": [
+                                                            {
+                                                                "name": "customFieldValue",
+                                                                "type": "text",
+                                                                "label": "CNPJ",
+                                                                "required": true
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                        "available_for_mailing": {
+                                            "mode": "chose"
+                                        }
+                                    },
+                                    "parameters": {
+                                        "__IMTCONN__": {
+                                            "data": {
+                                                "scoped": "true",
+                                                "connection": "rd-station"
+                                            },
+                                            "label": "RD Station connection (Zipline Tecnologia Ltda.)"
+                                        }
+                                    }
+                                },
+                                "parameters": [
+                                    {
+                                        "name": "__IMTCONN__",
+                                        "type": "account:rd-station",
+                                        "label": "Connection",
+                                        "required": true
+                                    }
+                                ],
+                                "expect": [
+                                    {
+                                        "name": "conversion_identifier",
+                                        "type": "text",
+                                        "label": "Event Identifier",
+                                        "required": true
+                                    },
+                                    {
+                                        "name": "email",
+                                        "type": "email",
+                                        "label": "Email",
+                                        "required": true
+                                    },
+                                    {
+                                        "name": "name",
+                                        "type": "text",
+                                        "label": "Name"
+                                    },
+                                    {
+                                        "name": "job_title",
+                                        "type": "text",
+                                        "label": "Job Title"
+                                    },
+                                    {
+                                        "name": "state",
+                                        "type": "text",
+                                        "label": "State"
+                                    },
+                                    {
+                                        "name": "city",
+                                        "type": "text",
+                                        "label": "City"
+                                    },
+                                    {
+                                        "name": "country",
+                                        "type": "text",
+                                        "label": "Country"
+                                    },
+                                    {
+                                        "name": "personal_phone",
+                                        "type": "text",
+                                        "label": "Personal Phone"
+                                    },
+                                    {
+                                        "name": "mobile_phone",
+                                        "type": "text",
+                                        "label": "Mobile Phone"
+                                    },
+                                    {
+                                        "name": "twitter",
+                                        "type": "text",
+                                        "label": "Twitter"
+                                    },
+                                    {
+                                        "name": "facebook",
+                                        "type": "text",
+                                        "label": "Facebook"
+                                    },
+                                    {
+                                        "name": "linkedin",
+                                        "type": "text",
+                                        "label": "Linkedin"
+                                    },
+                                    {
+                                        "name": "website",
+                                        "type": "url",
+                                        "label": "Website"
+                                    },
+                                    {
+                                        "name": "company_name",
+                                        "type": "text",
+                                        "label": "Company Name"
+                                    },
+                                    {
+                                        "name": "company_site",
+                                        "type": "url",
+                                        "label": "Company Site"
+                                    },
+                                    {
+                                        "name": "company_address",
+                                        "type": "text",
+                                        "label": "Company Address"
+                                    },
+                                    {
+                                        "name": "client_tracking_id",
+                                        "type": "text",
+                                        "label": "Client tracking ID"
+                                    },
+                                    {
+                                        "name": "traffic_source",
+                                        "type": "text",
+                                        "label": "Traffic Source"
+                                    },
+                                    {
+                                        "name": "traffic_medium",
+                                        "type": "text",
+                                        "label": "Traffic Medium"
+                                    },
+                                    {
+                                        "name": "traffic_campaign",
+                                        "type": "text",
+                                        "label": "Traffic Campaign"
+                                    },
+                                    {
+                                        "name": "traffic_value",
+                                        "type": "text",
+                                        "label": "Traffic Value"
+                                    },
+                                    {
+                                        "name": "tags",
+                                        "spec": {
+                                            "name": "value",
+                                            "type": "text",
+                                            "label": "Tag"
+                                        },
+                                        "type": "array",
+                                        "label": "Tags"
+                                    },
+                                    {
+                                        "name": "available_for_mailing",
+                                        "type": "boolean",
+                                        "label": "Available for Mailing"
+                                    },
+                                    {
+                                        "name": "legal_bases",
+                                        "spec": [
+                                            {
+                                                "name": "category",
+                                                "type": "select",
+                                                "label": "Category",
+                                                "options": [
+                                                    {
+                                                        "label": "Data Processing",
+                                                        "value": "data_processing",
+                                                        "nested": [
+                                                            {
+                                                                "name": "status",
+                                                                "type": "select",
+                                                                "label": "Status",
+                                                                "options": [
+                                                                    {
+                                                                        "label": "Granted",
+                                                                        "value": "granted"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "label": "Communications",
+                                                        "value": "communications",
+                                                        "nested": [
+                                                            {
+                                                                "name": "status",
+                                                                "type": "select",
+                                                                "label": "Status",
+                                                                "options": [
+                                                                    {
+                                                                        "label": "Granted",
+                                                                        "value": "granted"
+                                                                    },
+                                                                    {
+                                                                        "label": "Declined",
+                                                                        "value": "declined"
+                                                                    }
+                                                                ],
+                                                                "required": true
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "name": "type",
+                                                "type": "select",
+                                                "label": "Type",
+                                                "options": [
+                                                    {
+                                                        "label": "Pre Existent Contract",
+                                                        "value": "pre_existent_contract"
+                                                    },
+                                                    {
+                                                        "label": "Consent",
+                                                        "value": "consent"
+                                                    },
+                                                    {
+                                                        "label": "Legitimate Interest",
+                                                        "value": "legitimate_interest"
+                                                    },
+                                                    {
+                                                        "label": "Judicial Process",
+                                                        "value": "judicial_process"
+                                                    },
+                                                    {
+                                                        "label": "Vital Interest",
+                                                        "value": "vital_interest"
+                                                    },
+                                                    {
+                                                        "label": "Public Interest",
+                                                        "value": "public_interest"
+                                                    }
+                                                ]
+                                            }
+                                        ],
+                                        "type": "array",
+                                        "label": "Legal Bases"
+                                    },
+                                    {
+                                        "name": "customFields",
+                                        "spec": [
+                                            {
+                                                "name": "customFieldName",
+                                                "type": "select",
+                                                "label": "Custom Field Name",
+                                                "dynamic": true,
+                                                "options": {
+                                                    "store": []
+                                                },
+                                                "required": true
+                                            }
+                                        ],
+                                        "type": "array",
+                                        "label": "Custom Fields"
+                                    }
+                                ]
+                            },
+                            "onerror": [
+                                {
+                                    "id": 24,
+                                    "module": "builtin:Ignore",
+                                    "version": 1,
+                                    "metadata": {
+                                        "designer": {
+                                            "x": 1200,
+                                            "y": 600
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "metadata": {
+        "instant": true,
+        "version": 1,
+        "scenario": {
+            "roundtrips": 1,
+            "maxErrors": 3,
+            "autoCommit": true,
+            "autoCommitTriggerLast": true,
+            "sequential": false,
+            "slots": null,
+            "confidential": false,
+            "dataloss": false,
+            "dlq": true,
+            "freshVariables": false
+        },
+        "designer": {
+            "orphans": []
+        },
+        "zone": "us2.make.com",
+        "notes": []
+    }
+}
